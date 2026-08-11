@@ -177,8 +177,56 @@
     background:var(--accent);flex-shrink:0;
   }
 
+  /* ── experience ── */
+  #experience{background:var(--bg2)}
+  .exp-list{display:flex;flex-direction:column;gap:1.5rem}
+  .exp-card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:8px;padding:1.75rem;
+    display:flex;gap:1.25rem;align-items:flex-start;
+    transition:border-color .2s,transform .2s;
+  }
+  .exp-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+  .exp-icon{
+    width:44px;height:44px;border-radius:6px;flex-shrink:0;
+    background:rgba(0,245,196,0.1);
+    display:flex;align-items:center;justify-content:center;
+    font-size:20px;
+  }
+  .exp-body{flex:1}
+  .exp-top{
+    display:flex;justify-content:space-between;align-items:flex-start;
+    flex-wrap:wrap;gap:.5rem;margin-bottom:.25rem;
+  }
+  .exp-role{font-size:16px;font-weight:700}
+  .exp-date{
+    font-family:'Space Mono',monospace;font-size:11px;color:var(--accent);
+    white-space:nowrap;
+  }
+  .exp-company{font-size:13px;color:var(--muted);margin-bottom:.25rem}
+  .exp-location{font-size:12px;color:var(--muted);margin-bottom:.75rem}
+  .exp-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:.75rem}
+  .exp-list-items{list-style:none;margin-bottom:1rem}
+  .exp-list-items li{
+    font-size:13px;color:var(--muted);line-height:1.7;
+    padding-left:1.1rem;position:relative;
+  }
+  .exp-list-items li::before{
+    content:'';position:absolute;left:0;top:.6em;
+    width:6px;height:6px;border-radius:50%;background:var(--accent);
+  }
+  .exp-footer{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+  .exp-cert-link{
+    display:inline-flex;align-items:center;gap:6px;
+    font-family:'Space Mono',monospace;font-size:12px;
+    color:var(--accent);text-decoration:none;
+    border:1px solid var(--border);padding:.4rem .9rem;border-radius:4px;
+    transition:border-color .2s,gap .2s;
+  }
+  .exp-cert-link:hover{border-color:var(--accent);gap:10px}
+
   /* ── certifications ── */
-  #certs{background:var(--bg2)}
+  #certs{background:var(--bg)}
   .certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
   .cert-card{
     background:var(--card);border:1px solid var(--border);
@@ -203,7 +251,7 @@
   }
 
   /* ── projects ── */
-  #projects{background:var(--bg)}
+  #projects{background:var(--bg2)}
   .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.25rem}
   .project-card{
     background:var(--card);border:1px solid var(--border);
@@ -233,7 +281,7 @@
   .project-link:hover{gap:10px}
 
   /* ── contact ── */
-  #contact{background:var(--bg2)}
+  #contact{background:var(--bg)}
   .contact-inner{
     display:grid;grid-template-columns:1fr 1fr;
     gap:4rem;align-items:start;
@@ -288,6 +336,7 @@
     #hero{padding:7rem 1.5rem 3rem}
     .about-grid,.contact-inner{grid-template-columns:1fr}
     .hero-stats{gap:2rem}
+    .exp-top{flex-direction:column}
   }
 </style>
 </head>
@@ -299,6 +348,7 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#certs">Certs</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -310,7 +360,7 @@
   <div class="hero-tag">Cybersecurity Professional</div>
   <h1> DAWOOD<br></h1>
   <p class="hero-sub">
-    Aspiring SOC Analyst & Penetration Tester with hands-on experience in network security, threat detection, and vulnerability assessment. CompTIA Security+ certified. Relocating to Saudi Arabia.
+    Aspiring SOC Analyst & Penetration Tester with hands-on internship experience in network security, threat detection, application security, and GRC. CompTIA Security+ certified. Based in Saudi Arabia, open to relocation.
   </p>
   <div class="hero-btns">
     <a href="#projects" class="btn btn-primary">View My Work →</a>
@@ -322,8 +372,8 @@
       <div class="stat-label">Certifications</div>
     </div>
     <div>
-      <div class="stat-num">1yr</div>
-      <div class="stat-label">GitHub Activity</div>
+      <div class="stat-num">2</div>
+      <div class="stat-label">Internships</div>
     </div>
     <div>
       <div class="stat-num">10+</div>
@@ -348,14 +398,17 @@
         <p>
           I am a cybersecurity professional with a strong foundation in
           <strong>network security, ethical hacking, and SOC operations</strong>. I have completed
-          industry-recognized certifications and built hands-on experience through real-world lab environments.
+          industry-recognized certifications and applied them through two hands-on internships covering
+          both technical security and GRC (Governance, Risk & Compliance) work.
         </p>
         <p>
           My focus is on <strong>SOC analyst work</strong> — monitoring threats, analysing network traffic,
-          and responding to security incidents using tools like Splunk, Wireshark, and Nmap.
+          and responding to security incidents using tools like Splunk, Wireshark, and Nmap. I've also worked
+          on <strong>application and API security</strong>, using Burp Suite, OWASP ZAP, and Fail2ban to inspect
+          HTTP traffic and identify common vulnerabilities.
         </p>
         <p>
-          I am currently in Saudi Arabia and actively seeking opportunities in
+          I am currently based in Saudi Arabia and actively seeking opportunities in
           <strong>cybersecurity operations, threat detection, or information security roles</strong>.
         </p>
       </div>
@@ -371,7 +424,7 @@
           <div class="hi-icon">📍</div>
           <div class="hi-text">
             <strong>Location</strong>
-            Jeddah, Saudia Arabia → Available for Relocating 
+            Jeddah, Saudi Arabia → Available for Relocation
           </div>
         </div>
         <div class="highlight-item">
@@ -432,6 +485,15 @@
         </ul>
       </div>
       <div class="skill-card">
+        <div class="skill-cat">Application & API Security</div>
+        <ul class="skill-list">
+          <li>OWASP ZAP</li>
+          <li>Fail2ban</li>
+          <li>HTTP Header Inspection</li>
+          <li>Request/Response Analysis</li>
+        </ul>
+      </div>
+      <div class="skill-card">
         <div class="skill-cat">Programming</div>
         <ul class="skill-list">
           <li>Python (scripting)</li>
@@ -442,13 +504,13 @@
         </ul>
       </div>
       <div class="skill-card">
-        <div class="skill-cat">Frameworks</div>
+        <div class="skill-cat">Frameworks & GRC</div>
         <ul class="skill-list">
           <li>MITRE ATT&CK</li>
           <li>NIST Framework</li>
-          <li>ISO 27001 (basics)</li>
+          <li>ISO 27001</li>
+          <li>SAMA Cybersecurity Framework</li>
           <li>NCA ECC (Saudi)</li>
-          <li>OWASP</li>
         </ul>
       </div>
       <div class="skill-card">
@@ -465,6 +527,78 @@
   </div>
 </section>
 
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-wrap fade-in">
+    <div class="section-head">
+      <div class="section-tag">Experience</div>
+      <h2>Internships</h2>
+    </div>
+    <div class="exp-list">
+
+      <div class="exp-card">
+        <div class="exp-icon">🛡️</div>
+        <div class="exp-body">
+          <div class="exp-top">
+            <div class="exp-role">Cyber Security Internship</div>
+            <div class="exp-date">May 2026 – Jul 2026 · 3 mos</div>
+          </div>
+          <div class="exp-company">Graxo Consulting (Pvt) Ltd · Internship</div>
+          <div class="exp-location">Saudi Arabia · Remote</div>
+          <p class="exp-desc">
+            Completed an intensive cybersecurity internship and learning program covering both technical and
+            GRC (Governance, Risk & Compliance) domains, applying knowledge from the Google Cybersecurity
+            Professional Certificate, CompTIA Security+, and Pentest Cyber Specialist certifications in a
+            practical setting.
+          </p>
+          <ul class="exp-list-items">
+            <li>ISO 27001 information security management framework</li>
+            <li>SAMA (Saudi Central Bank) Cybersecurity Framework and regulatory requirements</li>
+            <li>Security fundamentals, threat analysis, and SOC/blue-team workflows</li>
+            <li>Applying compliance and technical security knowledge to real-world scenarios</li>
+          </ul>
+          <div class="exp-footer">
+            <span class="tag">Security Monitoring</span>
+            <span class="tag">Cyber Security Risk</span>
+            <span class="tag">ISO 27001</span>
+            <span class="tag">SAMA Framework</span>
+            <a href="https://linkedin.com/in/dawood-engineer" class="exp-cert-link" target="_blank">View Certificate →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-icon">🔍</div>
+        <div class="exp-body">
+          <div class="exp-top">
+            <div class="exp-role">Cyber Security Intern</div>
+            <div class="exp-date">Dec 2025 – Jan 2026 · 2 mos</div>
+          </div>
+          <div class="exp-company">DevelopersHub Corporation© · Internship</div>
+          <div class="exp-location">Lahore, Punjab, Pakistan · Remote</div>
+          <p class="exp-desc">
+            Completed a hands-on cybersecurity internship focused on identifying vulnerabilities and analysing
+            application and API behaviour, gaining experience with application logic, basic code behaviour, and
+            common security weaknesses to strengthen application security fundamentals.
+          </p>
+          <ul class="exp-list-items">
+            <li>Used Burp Suite and OWASP ZAP to inspect HTTP headers and request–response flows</li>
+            <li>Analysed API traffic patterns to identify common vulnerabilities</li>
+            <li>Used Wireshark and Fail2ban for traffic inspection and intrusion prevention</li>
+          </ul>
+          <div class="exp-footer">
+            <span class="tag">Burp Suite</span>
+            <span class="tag">OWASP ZAP</span>
+            <span class="tag">API Security</span>
+            <a href="https://linkedin.com/in/dawood-engineer" class="exp-cert-link" target="_blank">View Certificate →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- CERTIFICATIONS -->
 <section id="certs">
   <div class="section-wrap fade-in">
@@ -472,6 +606,7 @@
       <div class="section-tag">Certifications</div>
       <h2>Recognised credentials</h2>
     </div>
+    <div class="certs-grid">
       <div class="cert-card">
         <div class="cert-icon">🌐</div>
         <div>
@@ -480,7 +615,6 @@
           <span class="cert-badge">Verified</span>
         </div>
       </div>
-    <div class="certs-grid">
       <div class="cert-card">
         <div class="cert-icon">🔐</div>
         <div>
@@ -528,7 +662,7 @@
           <span class="tag">PCAP</span>
           <span class="tag">TCP/IP</span>
         </div>
-        <a href="https://github.com/DecIder23/cybersecurity-portfolio" class="project-link">View on GitHub →</a>
+        <a href="https://github.com/Dawood-Tech32/cybersecurity-portfolio" class="project-link">View on GitHub →</a>
       </div>
 
       <div class="project-card">
@@ -540,7 +674,7 @@
           <span class="tag">Kali Linux</span>
           <span class="tag">Recon</span>
         </div>
-        <a href="https://github.com/DecIder23/cybersecurity-portfolio" class="project-link">View on GitHub →</a>
+        <a href="https://github.com/Dawood-Tech32/cybersecurity-portfolio" class="project-link">View on GitHub →</a>
       </div>
 
       <div class="project-card">
@@ -552,7 +686,7 @@
           <span class="tag">OpenCV</span>
           <span class="tag">ML</span>
         </div>
-        <a href="https://github.com/DecIder23/Face-Attendance-System" class="project-link">View on GitHub →</a>
+        <a href="https://github.com/Dawood-Tech32/Face-Attendance-System" class="project-link">View on GitHub →</a>
       </div>
 
       <div class="project-card">
@@ -564,7 +698,7 @@
           <span class="tag">JavaScript</span>
           <span class="tag">Full Stack</span>
         </div>
-        <a href="https://github.com/DecIder23/Full-Stack-Job-Listing-Web-App" class="project-link">View on GitHub →</a>
+        <a href="https://github.com/Dawood-Tech32/Full-Stack-Job-Listing-Web-App" class="project-link">View on GitHub →</a>
       </div>
 
       <div class="project-card">
@@ -618,7 +752,7 @@
               <span>GitHub</span>
               <span class="contact-link-label">github.com/Dawood-Tech32</span>
             </div>
-         
+          </a>
           <a href="https://tryhackme.com/p/YOUR-THM-USERNAME" class="contact-link" target="_blank">
             <div class="contact-link-icon" style="background:rgba(255,77,109,0.15)">🔴</div>
             <div>
