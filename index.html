@@ -225,6 +225,47 @@
   }
   .exp-cert-link:hover{border-color:var(--accent);gap:10px}
 
+  /* ── training & labs ── */
+  #labs{background:var(--bg)}
+  .lab-platform{margin-bottom:2.5rem}
+  .lab-platform:last-child{margin-bottom:0}
+  .lab-platform-head{
+    display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;
+  }
+  .lab-platform-title{
+    font-family:'Space Mono',monospace;font-size:13px;
+    color:var(--text);letter-spacing:.1em;text-transform:uppercase;
+  }
+  .lab-platform-count{
+    font-family:'Space Mono',monospace;font-size:11px;color:var(--muted);
+    border:1px solid var(--border);border-radius:20px;padding:2px 10px;
+  }
+  .labs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+  .lab-card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:8px;padding:1.25rem;
+    display:flex;flex-direction:column;gap:.6rem;
+    transition:border-color .2s,transform .2s;
+  }
+  .lab-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+  .lab-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+  .lab-name{font-size:14px;font-weight:700;line-height:1.4}
+  .lab-status{
+    font-family:'Space Mono',monospace;font-size:9px;
+    padding:3px 8px;border-radius:3px;white-space:nowrap;flex-shrink:0;
+    letter-spacing:.03em;
+  }
+  .lab-status.done{background:rgba(0,245,196,0.12);color:var(--accent)}
+  .lab-status.progress{background:rgba(255,196,0,0.12);color:#ffc400}
+  .lab-desc{font-size:12px;color:var(--muted);line-height:1.6}
+  .lab-link{
+    display:inline-flex;align-items:center;gap:6px;
+    font-family:'Space Mono',monospace;font-size:11px;
+    color:var(--accent);text-decoration:none;margin-top:auto;
+    transition:gap .2s;
+  }
+  .lab-link:hover{gap:9px}
+
   /* ── certifications ── */
   #certs{background:var(--bg)}
   .certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
@@ -349,6 +390,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#labs">Labs</a></li>
     <li><a href="#certs">Certs</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -590,11 +632,151 @@
             <span class="tag">Burp Suite</span>
             <span class="tag">OWASP ZAP</span>
             <span class="tag">API Security</span>
-            <a href="https://www.linkedin.com/in/dawood-engineer/overlay/Position/2765845569/treasury/?profileId=ACoAAFigL5UBetUf5VZ59kdLF7uOq5DJap_wH5s&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_media_list%3B3DWLW%2BGjRmGoXh9D2B3tPA%3D%3D" class="exp-cert-link" target="_blank">View Certificate →</a>
+            <a href="https://linkedin.com/in/dawood-engineer" class="exp-cert-link" target="_blank">View Certificate →</a>
           </div>
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- TRAINING & LABS -->
+<section id="labs">
+  <div class="section-wrap fade-in">
+    <div class="section-head">
+      <div class="section-tag">Training & Labs</div>
+      <h2>Solved challenges & writeups</h2>
+    </div>
+
+    <!-- FlagYard -->
+    <div class="lab-platform">
+      <div class="lab-platform-head">
+        <div class="lab-platform-title">FlagYard</div>
+        <div class="lab-platform-count">1 writeup</div>
+      </div>
+      <div class="labs-grid">
+        <div class="lab-card">
+          <div class="lab-top">
+            <div class="lab-name">Index Slip</div>
+            <span class="lab-status done">SOLVED</span>
+          </div>
+          <p class="lab-desc">Forensics · Easy · 50 pts — recovered a deleted filename from an extracted Windows filesystem using LNK/jump-list artifacts.</p>
+          <a href="https://github.com/Dawood-Tech32/CTF-WRITEUPS/tree/main/Flagyard/Index%20Slip" class="lab-link" target="_blank">View Writeup →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hacker101 -->
+    <div class="lab-platform">
+      <div class="lab-platform-head">
+        <div class="lab-platform-title">Hacker101 CTF</div>
+        <div class="lab-platform-count">4 writeups</div>
+      </div>
+      <div class="labs-grid">
+        <div class="lab-card">
+          <div class="lab-top">
+            <div class="lab-name">A Little Something to Get You Started</div>
+            <span class="lab-status done">COMPLETED</span>
+          </div>
+          <p class="lab-desc">Client-side recon warm-up — locating a flag referenced in page source/CSS rather than the rendered page.</p>
+          <a href="https://github.com/Dawood-Tech32/CTF-WRITEUPS/tree/main/hacker101/A%20little%20something%20to%20get%20you%20started" class="lab-link" target="_blank">View Writeup →</a>
+        </div>
+        <div class="lab-card">
+          <div class="lab-top">
+            <div class="lab-name">Micro-CMS v1</div>
+            <span class="lab-status done">ALL FLAGS FOUND</span>
+          </div>
+          <p class="lab-desc">Stored XSS, SQL injection, and IDOR across a small CMS app — including a filter-bypass XSS payload.</p>
+          <a href="https://github.com/Dawood-Tech32/CTF-WRITEUPS/tree/main/hacker101/Micro-CMS%20v1" class="lab-link" target="_blank">View Writeup →</a>
+        </div>
+        <div class="lab-card">
+          <div class="lab-top">
+            <div class="lab-name">Micro-CMS v2</div>
+            <span class="lab-status progress">2 / 3 FLAGS</span>
+          </div>
+          <p class="lab-desc">Auth added on top of v1 — UNION-based SQLi auth bypass and an HTTP-method access-control gap solved; credential brute-force in progress.</p>
+          <a href="https://github.com/Dawood-Tech32/CTF-WRITEUPS/tree/main/hacker101/Micro-CMS%20v2" class="lab-link" target="_blank">View Writeup →</a>
+        </div>
+        <div class="lab-card">
+          <div class="lab-top">
+            <div class="lab-name">Postbook</div>
+            <span class="lab-status progress">5 / 7 FLAGS</span>
+          </div>
+          <p class="lab-desc">Repeated IDOR patterns across create/view/edit/delete on a social posting app, including a guessable MD5-hashed ID.</p>
+          <a href="https://github.com/Dawood-Tech32/CTF-WRITEUPS/tree/main/hacker101/Postbook" class="lab-link" target="_blank">View Writeup →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HTB Academy -->
+    <div class="lab-platform">
+      <div class="lab-platform-head">
+        <div class="lab-platform-title">HackTheBox Academy</div>
+        <div class="lab-platform-count">7 modules</div>
+      </div>
+      <div class="labs-grid">
+        <div class="lab-card">
+          <div class="lab-top">
+            <div class="lab-name">Intro to Academy</div>
+            <span class="lab-status done">COMPLETED</span>
+          </div>
+          <p class="lab-desc">Platform orientation — module structure, difficulty tiers, Pwnbox, and progress tracking.</p>
+          <a href="https://github.com/Dawood-Tech32/CTF-WRITEUPS/tree/main/htb/Academy/Intro%20to%20Academy" class="lab-link" target="_blank">View Writeup →</a>
+        </div>
+        <div class="lab-card">
+          <div class="lab-top">
+            <div class="lab-name">Linux Fundamentals</div>
+            <span class="lab-status done">COMPLETED</span>
+          </div>
+          <p class="lab-desc">Navigation, permissions (incl. SUID/SGID), process management, networking basics, and text processing.</p>
+          <a href="https://github.com/Dawood-Tech32/CTF-WRITEUPS/tree/main/htb/Academy/Linux%20Fundamentals" class="lab-link" target="_blank">View Writeup →</a>
+        </div>
+        <div class="lab-card">
+          <div class="lab-top">
+            <div class="lab-name">Web Requests</div>
+            <span class="lab-status done">COMPLETED</span>
+          </div>
+          <p class="lab-desc">HTTP request/response structure, methods, status codes, and crafting raw requests via curl/Python.</p>
+          <a href="https://github.com/Dawood-Tech32/CTF-WRITEUPS/tree/main/htb/Academy/Web%20Requests" class="lab-link" target="_blank">View Writeup →</a>
+        </div>
+        <div class="lab-card">
+          <div class="lab-top">
+            <div class="lab-name">Network Enumeration with Nmap</div>
+            <span class="lab-status done">COMPLETED</span>
+          </div>
+          <p class="lab-desc">Host discovery, TTL-based OS fingerprinting, NSE scripting, and firewall/IDS-IPS evasion across 3 lab tiers.</p>
+          <a href="https://github.com/Dawood-Tech32/CTF-WRITEUPS/tree/main/htb/Academy/Network%20Enumeration%20with%20Nmap" class="lab-link" target="_blank">View Writeup →</a>
+        </div>
+        <div class="lab-card">
+          <div class="lab-top">
+            <div class="lab-name">JavaScript Deobfuscation</div>
+            <span class="lab-status done">COMPLETED</span>
+          </div>
+          <p class="lab-desc">Reading and safely deobfuscating minified/malicious client-side JS without executing untrusted payloads.</p>
+          <a href="https://github.com/Dawood-Tech32/CTF-WRITEUPS/tree/main/htb/Academy/JavaScript%20Deobfuscation" class="lab-link" target="_blank">View Writeup →</a>
+        </div>
+        <div class="lab-card">
+          <div class="lab-top">
+            <div class="lab-name">Using the Metasploit Framework</div>
+            <span class="lab-status done">10 CUBES</span>
+          </div>
+          <p class="lab-desc">MSF module/payload selection, session handling, and Meterpreter post-exploitation (incl. Kiwi credential dumping) across 4 sections.</p>
+          <a href="https://github.com/Dawood-Tech32/CTF-WRITEUPS/tree/main/htb/Academy/Using%20the%20Metasploit%20Framework" class="lab-link" target="_blank">View Writeup →</a>
+        </div>
+        <div class="lab-card">
+          <div class="lab-top">
+            <div class="lab-name">Getting Started</div>
+            <span class="lab-status done">COMPLETED</span>
+          </div>
+          <p class="lab-desc">End-to-end pentest methodology on a guided target — enumeration, exploitation, shell stabilization, and reporting mindset.</p>
+          <a href="https://github.com/Dawood-Tech32/CTF-WRITEUPS/tree/main/htb/Academy/Getting%20Started" class="lab-link" target="_blank">View Writeup →</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:2rem;text-align:center">
+      <a href="https://github.com/Dawood-Tech32/CTF-WRITEUPS" class="btn btn-outline" target="_blank">View Full Writeup Repo on GitHub →</a>
     </div>
   </div>
 </section>
